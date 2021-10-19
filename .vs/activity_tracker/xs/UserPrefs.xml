@@ -1,23 +1,12 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{7E56ACCC-ED8F-4A94-BBC6-FC59BECC14C1}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Task.cs">
     <Files>
-      <File FileName="Program.cs" Line="7" Column="40" />
-      <File FileName="Task.cs" Line="4" Column="22" />
+      <File FileName="Program.cs" Line="35" Column="18" />
+      <File FileName="Task.cs" Line="32" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="activity_tracker" expanded="True">
-            <Node name="activity_tracker" expanded="True">
-              <Node name="Task.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.activity__tracker FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.activity__tracker PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
