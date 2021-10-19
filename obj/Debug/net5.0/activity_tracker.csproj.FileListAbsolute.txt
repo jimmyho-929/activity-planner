@@ -1,0 +1,15 @@
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/activity_tracker.deps.json
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/activity_tracker.runtimeconfig.json
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/activity_tracker.runtimeconfig.dev.json
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/activity_tracker.dll
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/ref/activity_tracker.dll
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/bin/Debug/net5.0/activity_tracker.pdb
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.csproj.AssemblyReference.cache
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.AssemblyInfoInputs.cache
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.AssemblyInfo.cs
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.csproj.CoreCompileInputs.cache
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.dll
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/ref/activity_tracker.dll
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.pdb
+/Users/jimmy/Desktop/C#/activity-tracker/activity_tracker/obj/Debug/net5.0/activity_tracker.genruntimeconfig.cache
