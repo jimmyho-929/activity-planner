@@ -4,7 +4,7 @@ This is my C# project for Code Louisville. This project is an attempt to keep tr
 
 The features I plan to implement are:
 
-Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program
-Build a conversion tool that converts user input to another type and displays it (ex: converts cups to grams)
-Create an additional class which inherits one or more properties from its parent
-Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
+  1. Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program
+  2. Build a conversion tool that converts user input to another type and displays it (ex: converts cups to grams)
+  3. Create an additional class which inherits one or more properties from its parent
+  4. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
