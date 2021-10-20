@@ -18,7 +18,7 @@ namespace activity_tracker
                 Activity activity = new Activity();
                 Console.WriteLine("What are you doing currently?");
                 string task = Console.ReadLine();
-
+                Console.WriteLine();
                 activity.Task = task;
                 activityList.Add(task);
 
@@ -30,10 +30,14 @@ namespace activity_tracker
                 {
                     Console.WriteLine(item);
                 }
+                Console.WriteLine();
 
                 if (minutesRemaining == 0)
+
                 {
-                    Console.WriteLine("All the time has been spent for today. Tackle tomorrow.");
+                    
+                    Console.WriteLine("And that's it for day. Let's get back to it tomorrow.");
+                    break;
                 }
             }
             while (minutesRemaining <= 1440);

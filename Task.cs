@@ -8,6 +8,7 @@ namespace activity_tracker
         public void DoActivity()
         {
             Console.WriteLine($"Currently: {Task}");
+            Console.WriteLine();
         }
 
         public int ParseMinutes(ref int minutesRemaining)
@@ -18,10 +19,19 @@ namespace activity_tracker
             var minutes = Console.ReadLine();
 
             int.TryParse(minutes, out parsedMins);
-            Console.WriteLine($"You spent {parsedMins} minutes on {Task}");
+
+            if (parsedMins > 1440)
+            {
+                Console.WriteLine("Invalid response. Enter a number less than 1440");
+            }
+            else
+            {
+                Console.WriteLine($"You spent {parsedMins} minutes on {Task}");
+            }
+            
 
             Console.WriteLine($"There are {minutesRemaining -= parsedMins} minutes left in the day.");
-
+            Console.WriteLine();
             return minutesRemaining;
 
         }
