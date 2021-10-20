@@ -22,15 +22,17 @@ namespace activity_tracker
 
             if (parsedMins > 1440)
             {
-                Console.WriteLine("Invalid response. Enter a number less than 1440");
+                Console.WriteLine("Invalid response. Enter a number less than 1440.");
             }
+          
             else
             {
                 Console.WriteLine($"You spent {parsedMins} minutes on {Task}");
+                Console.WriteLine($"There are {minutesRemaining -= parsedMins} minutes left in the day.");
             }
             
 
-            Console.WriteLine($"There are {minutesRemaining -= parsedMins} minutes left in the day.");
+            
             Console.WriteLine();
             return minutesRemaining;
 
