@@ -3,38 +3,31 @@ namespace activity_tracker
 {
     public class Activity
     {
-        public string Task;
-
-        public void DoActivity()
-        {
-            Console.WriteLine($"Currently: {Task}");
-            Console.WriteLine();
-        }
+        public string Task { get; set; }
+        
 
         public int ParseMinutes(ref int minutesRemaining)
         {
-            int parsedMins;
-
-            Console.WriteLine("How many minutes did you spend doing this?");
+            Console.WriteLine($"How much time do you want to allocate for this task? (in minutes)");
             var minutes = Console.ReadLine();
+            Console.WriteLine();
 
-            int.TryParse(minutes, out parsedMins);
+            int.TryParse(minutes, out int parsedMins);
 
-            if (parsedMins > 1440)
+            //timeSpent = parsedMins;
+
+            if (parsedMins > minutesRemaining)
             {
-                Console.WriteLine("Invalid response. Enter a number less than 1440.");
+                Console.WriteLine("Silly goose, you can't spend more time than there is left in the day!");
             }
           
             else
             {
-                Console.WriteLine($"You spent {parsedMins} minutes on {Task}");
-                Console.WriteLine($"There are {minutesRemaining -= parsedMins} minutes left in the day.");
+                Console.WriteLine($"You plan on spending {parsedMins} minutes for {Task}");
+                Console.WriteLine();
             }
-            
 
-            
-            Console.WriteLine();
-            return minutesRemaining;
+            return minutesRemaining -= parsedMins;
 
         }
 
