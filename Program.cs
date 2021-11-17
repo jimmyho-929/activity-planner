@@ -7,7 +7,7 @@ namespace activity_tracker
     {
         static void Main(string[] args)
         {
-
+            Activity activity = new Activity();
             bool quitApp = false;
             int minutesRemaining = 1440;
             List<string> activityList = new List<string>();
@@ -15,7 +15,7 @@ namespace activity_tracker
             Console.WriteLine("**** There are 1440 minutes in a day and this app's purpose is to help you maximize your productivity by planning out what you want to do for the day and how much time you want to spend on it. ****");
             do
             {
-                Console.WriteLine("Please select an option below \n 1: Add a task \n 2: View all current tasks \n 3: See how much time is left in the day \n 4: Quit");
+                Console.WriteLine("Please select an option below \n 1: Add a task \n 2: View all planned tasks \n 3: See how much time is left in the day \n 4: Quit");
                 var selectedOption = Console.ReadLine();
                 Console.WriteLine();
 
@@ -25,7 +25,7 @@ namespace activity_tracker
                         GenerateTask(activityList, ref minutesRemaining);
                         break;
                     case "2":
-                        ViewTasks(activityList);
+                        ViewTasks(activityList, activity);
                         break;
                     case "3":
                         Console.WriteLine($"There are {minutesRemaining} minutes remaining left in the day. \n");
@@ -42,19 +42,6 @@ namespace activity_tracker
 
         }
 
-    
-
-        private static void ViewTasks(List<string> activityList)
-        {
-            Console.WriteLine("Lists of tasks planned for today:");
-
-            foreach (var item in activityList)
-            {
-                Console.WriteLine($"{item}");
-            }
-            Console.WriteLine();
-        }
-
         private static void GenerateTask(List<string> activityList, ref int minutesRemaining)
         {
             Activity activity = new Activity();
@@ -64,9 +51,21 @@ namespace activity_tracker
             Console.WriteLine();
 
             activity.Task = task;
-            activityList.Add(task);
-            activity.ParseMinutes(ref minutesRemaining);
 
+            if (activity.ParseMinutes(ref minutesRemaining) >= 0)
+            { activityList.Add(task); }
         }
+
+        private static void ViewTasks(List<string> activityList, Activity activity)
+        {
+            Console.WriteLine("Lists of tasks planned for today:");
+
+            foreach (var item in activityList)
+            {
+                Console.WriteLine($"{item}: {activity.TimeSpent} minutes");
+            }
+            Console.WriteLine();
+        }
+
     }
 }

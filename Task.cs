@@ -4,7 +4,7 @@ namespace activity_tracker
     public class Activity
     {
         public string Task { get; set; }
-        
+        public int TimeSpent { get; set; }
 
         public int ParseMinutes(ref int minutesRemaining)
         {
@@ -14,16 +14,18 @@ namespace activity_tracker
 
             int.TryParse(minutes, out int parsedMins);
 
-            //timeSpent = parsedMins;
+            TimeSpent = parsedMins;
 
             if (parsedMins > minutesRemaining)
             {
                 Console.WriteLine("Silly goose, you can't spend more time than there is left in the day!");
+                Console.WriteLine();
             }
           
             else
             {
-                Console.WriteLine($"You plan on spending {parsedMins} minutes for {Task}");
+                decimal i = parsedMins;
+                Console.WriteLine($"You plan on spending {parsedMins} minutes or {i / 60} hours for {Task}.");
                 Console.WriteLine();
             }
 
