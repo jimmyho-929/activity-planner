@@ -27,7 +27,7 @@ namespace activity_tracker
                         ViewTasks(activityList);
                         break;
                     case "3":
-                        Console.WriteLine($"There are {minutesRemaining} minutes remaining left in the day. \n");
+                        DisplayTime(ref minutesRemaining);
                         break;
                     case "4":
                         quitApp = true;
@@ -39,6 +39,12 @@ namespace activity_tracker
             }
             while (!quitApp);
 
+        }
+
+        private static void DisplayTime(ref int minutesRemaining)
+        {
+            Console.WriteLine($"There are {minutesRemaining} minutes remaining left in the day for other activities.");
+            Console.WriteLine(); 
         }
 
         private static void GenerateTask(List<Activity> activityList, ref int minutesRemaining)
