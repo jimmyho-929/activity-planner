@@ -7,10 +7,9 @@ namespace activity_tracker
     {
         static void Main(string[] args)
         {
-            Activity activity = new Activity();
             bool quitApp = false;
             int minutesRemaining = 1440;
-            List<string> activityList = new List<string>();
+            List<Activity> activityList = new List<Activity>();
 
             Console.WriteLine("**** There are 1440 minutes in a day and this app's purpose is to help you maximize your productivity by planning out what you want to do for the day and how much time you want to spend on it. ****");
             do
@@ -25,7 +24,7 @@ namespace activity_tracker
                         GenerateTask(activityList, ref minutesRemaining);
                         break;
                     case "2":
-                        ViewTasks(activityList, activity);
+                        ViewTasks(activityList);
                         break;
                     case "3":
                         Console.WriteLine($"There are {minutesRemaining} minutes remaining left in the day. \n");
@@ -42,7 +41,7 @@ namespace activity_tracker
 
         }
 
-        private static void GenerateTask(List<string> activityList, ref int minutesRemaining)
+        private static void GenerateTask(List<Activity> activityList, ref int minutesRemaining)
         {
             Activity activity = new Activity();
             Console.WriteLine("What would you like to do today?");
@@ -53,16 +52,16 @@ namespace activity_tracker
             activity.Task = task;
 
             if (activity.ParseMinutes(ref minutesRemaining) >= 0)
-            { activityList.Add(task); }
+            { activityList.Add(activity); }
         }
 
-        private static void ViewTasks(List<string> activityList, Activity activity)
+        private static void ViewTasks(List<Activity> activityList)
         {
             Console.WriteLine("Lists of tasks planned for today:");
 
             foreach (var item in activityList)
             {
-                Console.WriteLine($"{item}: {activity.TimeSpent} minutes");
+                Console.WriteLine($"{item.Task}: {item.TimeSpent} minutes");
             }
             Console.WriteLine();
         }
