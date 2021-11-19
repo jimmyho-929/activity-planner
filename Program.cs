@@ -11,10 +11,10 @@ namespace activity_tracker
             int minutesRemaining = 1440;
             List<Activity> activityList = new List<Activity>();
 
-            Console.WriteLine("**** There are 1440 minutes in a day and this app's purpose is to help you maximize your productivity by planning out what you want to do for the day and how much time you want to spend on it. ****");
+            Console.WriteLine("**** There are 1440 minutes in a day. This application's purpose is to help you maximize your productivity by planning out what you want to do for the day and how much time you want to spend on it. ****");
             do
             {
-                Console.WriteLine("Please select an option below \n 1: Add a task \n 2: View all planned tasks \n 3: See how much time is left in the day \n 4: Quit");
+                Console.WriteLine("Please select an option below by typing in the appropriate number and hitting enter \n 1: Add a task \n 2: View all planned tasks \n 3: See how much time is left in the day \n 4: Quit");
                 var selectedOption = Console.ReadLine();
                 Console.WriteLine();
 
@@ -37,8 +37,14 @@ namespace activity_tracker
                         break;
                 }
             }
-            while (!quitApp);
+            while (!quitApp && minutesRemaining != 0);
 
+            if (minutesRemaining == 0)
+            {
+              
+                Console.WriteLine("Wow! You were able to plan out the whole day. Let's do it again tomorrow.");
+              
+            }
         }
 
         private static void DisplayTime(ref int minutesRemaining)

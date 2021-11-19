@@ -1,8 +1,8 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{7E56ACCC-ED8F-4A94-BBC6-FC59BECC14C1}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="100" Column="34" />
-      <File FileName="Task.cs" Line="38" Column="1" />
+      <File FileName="Program.cs" Line="58" Column="34" />
+      <File FileName="Task.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
