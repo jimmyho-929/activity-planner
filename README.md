@@ -1,6 +1,6 @@
 # activity-tracker
 
-This is my C# project for Code Louisville. This project is an attempt to keep track of one's productivity by displaying time spent out of the day performing a certain task and how time is remaining out of the day for other tasks.
+This is my C# project for Code Louisville. This project is an attempt to keep track of one's productivity by displaying time spent out of the day performing a certain task and how much time is remaining out of the day for other tasks.
 
 The features I plan to implement are:
 
